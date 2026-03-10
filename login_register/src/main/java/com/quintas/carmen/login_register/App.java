@@ -1,5 +1,6 @@
 package com.quintas.carmen.login_register;
 
+import com.quintas.carmen.login_register.model.RegistroCsvManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,12 +18,18 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
+        RegistroCsvManager.init();
         scene = new Scene(loadFXML("/com/quintas/carmen/login_register/fxml/Login"), 640, 480);
         stage.setScene(scene);
         stage.show();
     }
 
-    static void setRoot(String fxml) throws IOException {
+    @Override
+    public void stop() {
+        RegistroCsvManager.close();
+    }
+
+    public static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
     }
 

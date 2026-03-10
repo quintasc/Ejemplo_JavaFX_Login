@@ -6,4 +6,5 @@ module com.quintas.carmen.login_register {
     opens com.quintas.carmen.login_register to javafx.fxml;
     opens com.quintas.carmen.login_register.controller to javafx.fxml;
     exports com.quintas.carmen.login_register;
+    requires JavaApplicationEjemploJAR;
 }

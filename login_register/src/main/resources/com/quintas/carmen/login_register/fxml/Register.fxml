@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quintas.carmen.login_register.controller.RegisterController">
+   <children>
+      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="300.0" prefWidth="700.0" style="-fx-background-color: white; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 0, 0);">
+         <children>
+            <VBox alignment="CENTER" prefHeight="300.0" prefWidth="100.0" spacing="15.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Create an Account">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Label>
+
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" prefWidth="100.0" text="Username" />
+                        <TextField fx:id="txtUser" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" prefWidth="100.0" text="Email" />
+                        <TextField fx:id="txtEmail" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" prefWidth="100.0" text="Password" />
+                        <PasswordField fx:id="txtPassword" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" prefWidth="100.0" text="Confirm Password" />
+                        <PasswordField fx:id="txtConfirmPassword" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+
+                  <Label fx:id="lblInfo" />
+
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="btnRegister" mnemonicParsing="false" onAction="#onRegisterClick" text="Register" />
+                        <Button fx:id="btnLimpiar" managed="false" mnemonicParsing="false" onAction="#onLimpiarClick" text="Limpiar" visible="false" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Hyperlink fx:id="loginHLink" alignment="CENTER" onAction="#switchLogin" prefHeight="24.0" prefWidth="593.0" style="-fx-border-width: 0; -fx-background-color: transparent; -fx-focus-color: transparent; -fx-faint-focus-color: transparent;" text="Login" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+               </padding>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </padding>
+      </HBox>
+   </children>
+</StackPane>
